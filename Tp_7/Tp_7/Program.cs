@@ -6,9 +6,6 @@ using System.Threading.Tasks;
 
 namespace Tp_7
 {
-    
-
-
     class Program
     {
         public enum Cargo { Auxiliar, Administrativo, Ingeniero, Especialista, Investigado };
@@ -148,12 +145,10 @@ namespace Tp_7
                 mes = rnd.Next(1, 12);
                 anio = rnd.Next(1990, 2018);
                 empleado.Ingreso = new DateTime(anio, mes, dia);
-                
-                //Asigno genero.
-                genero = (Genero)rnd.Next(0,2);
 
-                //Asigno nombre dependiendo del genero y asigno.
-                if(genero == (Genero)0)
+                //Asigno genero, nombre dependiendo del genero y asigno Apellido.
+                genero = (Genero)rnd.Next(0, 2);
+                if (genero == (Genero)0)
                 {
                     empleado.Nombre = nombreFem[rnd.Next(0, 6)];
                 }
